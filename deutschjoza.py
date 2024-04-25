@@ -68,10 +68,12 @@ def Deutsch_Jozsa(n, f_map):
     measure(n, psi_3)
     
 def main():
-    n = [2,3,3]  # Input the number of qubits
-    f_map = [[0,0,1,1],
+    n = [2, 3, 3, 3, 2]  # Input the number of qubits 
+    f_map = [[0,0,0,0],
              [1,1,1,1,1,1,1,1],
-             [1,0,0,1,1,0,1,0],]  # Input the mapping functions
+             [1,0,0,1,1,0,1,0],
+             [1,0,0,0,1,1,1,0,1],
+             [1,0,1,0,1,0,1,0,1,0]]  # Input the mapping functions
     for index, value in enumerate(n):
         Deutsch_Jozsa(n[index], f_map[index])  # Algorithm executed here
 
